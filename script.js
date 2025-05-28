@@ -61,11 +61,12 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Contact form handling
+    // Contact form handling (removed - no longer needed)
     const contactForm = document.getElementById('contactForm');
     const formMessage = document.getElementById('formMessage');
 
-    contactForm.addEventListener('submit', function(e) {
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
         
         // Get form data
@@ -108,21 +109,24 @@ document.addEventListener('DOMContentLoaded', function() {
             submitBtn.textContent = originalText;
             submitBtn.disabled = false;
         }, 2000);
-    });
-
-    // Show form message
-    function showFormMessage(message, type) {
-        formMessage.textContent = message;
-        formMessage.className = `form-message ${type}`;
-        formMessage.style.display = 'block';
-        
-        // Hide message after 5 seconds
-        setTimeout(() => {
-            formMessage.style.display = 'none';
-        }, 5000);
+        });
     }
 
-    // Email validation
+    // Show form message (function kept for compatibility)
+    function showFormMessage(message, type) {
+        if (formMessage) {
+            formMessage.textContent = message;
+            formMessage.className = `form-message ${type}`;
+            formMessage.style.display = 'block';
+            
+            // Hide message after 5 seconds
+            setTimeout(() => {
+                formMessage.style.display = 'none';
+            }, 5000);
+        }
+    }
+
+    // Email validation (function kept for compatibility)
     function isValidEmail(email) {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
