@@ -124,8 +124,7 @@ p {
 
 /* Hero Section */
 .hero {
-    min-height: 60vh;
-    padding: 2rem 0 1rem;
+    padding: 2rem 0 0;
     background: linear-gradient(135deg, hsl(var(--accent-color)) 0%, hsl(var(--surface)) 100%);
 }
 
@@ -136,8 +135,7 @@ p {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
-    align-items: center;
-    min-height: 50vh;
+    align-items: start;
 }
 
 .hero-content {
@@ -146,14 +144,65 @@ p {
 
 .hero-title {
     color: hsl(var(--primary-color));
-    margin-bottom: 1.5rem;
+    margin-bottom: 0.5rem;
     line-height: 1.1;
+    font-size: 2.5rem;
 }
 
-.hero-subtitle {
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
+.hero-subtitle-main {
+    color: hsl(var(--secondary-color));
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.hero-description {
+    font-size: 1rem;
+    margin-bottom: 1rem;
     color: hsl(var(--text-secondary));
+    line-height: 1.5;
+}
+
+.hero-services {
+    margin: 1.5rem 0;
+}
+
+.hero-service {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+.service-icon {
+    font-size: 1.2rem;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+}
+
+.hero-service strong {
+    color: hsl(var(--primary-color));
+}
+
+.hero-tagline {
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: hsla(var(--primary-color), 0.05);
+    border-radius: 8px;
+    border-left: 4px solid hsl(var(--secondary-color));
+}
+
+.hero-tagline p {
+    margin: 0.5rem 0;
+    color: hsl(var(--text-primary));
+}
+
+.hero-tagline em {
+    color: hsl(var(--primary-color));
+    font-style: italic;
 }
 
 .cta-button {
@@ -600,7 +649,21 @@ p {
     }
     
     .hero {
-        padding: 2rem 0 1rem;
+        padding: 2rem 0 0;
+    }
+    
+    .hero-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 2rem;
+    }
+    
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .hero-subtitle-main {
+        font-size: 1.2rem;
     }
     
     .services,
