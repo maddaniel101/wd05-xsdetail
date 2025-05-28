@@ -332,76 +332,61 @@ p {
     color: hsl(var(--text-secondary));
 }
 
-/* Contact Form */
-.contact-form {
+/* Contact Actions */
+.contact-actions {
     background: hsl(var(--surface));
     padding: 2.5rem;
     border-radius: 12px;
     box-shadow: 0 10px 25px hsla(var(--shadow), 0.1);
+    text-align: center;
 }
 
-.contact-form h3 {
+.contact-actions h3 {
     color: hsl(var(--primary-color));
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
-.form-group {
-    margin-bottom: 1.5rem;
+.contact-actions p {
+    margin-bottom: 2rem;
+    color: hsl(var(--text-secondary));
 }
 
-.form-group input,
-.form-group textarea {
-    width: 100%;
-    padding: 1rem;
-    border: 2px solid hsl(var(--border));
-    border-radius: 8px;
-    font-family: inherit;
-    font-size: 1rem;
-    transition: border-color 0.3s ease;
-    background: hsl(var(--surface));
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-    outline: none;
-    border-color: hsl(var(--secondary-color));
-}
-
-.submit-btn {
-    background: hsl(var(--primary-color));
-    color: white;
+.call-button,
+.instagram-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
     padding: 1rem 2rem;
-    border: none;
+    margin: 0.5rem;
     border-radius: 8px;
-    font-size: 1rem;
+    text-decoration: none;
     font-weight: 600;
-    cursor: pointer;
+    font-size: 1.1rem;
     transition: all 0.3s ease;
-    width: 100%;
+    min-width: 200px;
+    justify-content: center;
 }
 
-.submit-btn:hover {
-    background: hsl(220 65% 20%);
-    transform: translateY(-1px);
+.call-button {
+    background: hsl(var(--secondary-color));
+    color: white;
+    box-shadow: 0 4px 15px hsla(var(--secondary-color), 0.3);
 }
 
-.form-message {
-    margin-top: 1rem;
-    padding: 1rem;
-    border-radius: 8px;
-    display: none;
+.call-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px hsla(var(--secondary-color), 0.4);
 }
 
-.form-message.success {
-    background: hsla(var(--success), 0.1);
-    color: hsl(var(--success));
-    border: 1px solid hsla(var(--success), 0.3);
+.instagram-button {
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    color: white;
+    box-shadow: 0 4px 15px hsla(var(--shadow), 0.3);
 }
 
-.form-message.error {
-    background: hsla(var(--error), 0.1);
-    color: hsl(var(--error));
-    border: 1px solid hsla(var(--error), 0.3);
+.instagram-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px hsla(var(--shadow), 0.4);
 }
 
 /* Footer */
