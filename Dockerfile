@@ -8,6 +8,7 @@ ENV PORT=5000
 COPY index.html /usr/share/nginx/html/
 COPY styles.css /usr/share/nginx/html/
 COPY script.js /usr/share/nginx/html/
+COPY attached_assets /usr/share/nginx/html/attached_assets/
 
 # Replace the default Nginx config with a custom one
 COPY nginx.conf /etc/nginx/conf.d/default.conf
